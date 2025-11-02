@@ -8,11 +8,5 @@ int main(void)
   graph(points, NUM_POINTS, f);
   lineGraph(points, NUM_POINTS);
 
-  graph(points, NUM_POINTS, g);
-  lineGraph(points, NUM_POINTS);
-
-  graph(points, NUM_POINTS, h);
-  lineGraph(points, NUM_POINTS);
-
   return 0;
 }
