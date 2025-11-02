@@ -46,6 +46,13 @@ You'll need a C compiler and the `make` tool.
     ```
     This builds the program for both Linux (`build/program`) and Windows (`build/program.exe`).
 
+    You can also build for a specific operating system:
+    ```sh
+    make linux
+    # or
+    make windows
+    ```
+
 3.  **Run the program:**
     - On Linux/macOS:
       ```sh
