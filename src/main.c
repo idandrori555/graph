@@ -1,5 +1,5 @@
-#include "examples.h"
-#include "graph.h"
+#include "../include/examples.h"
+#include "../include/graph.h"
 
 int main(void)
 {

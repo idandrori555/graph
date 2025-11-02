@@ -1,4 +1,4 @@
-#include "examples.h"
+#include "../include/examples.h"
 #include <math.h>
 
 double f(double x)
