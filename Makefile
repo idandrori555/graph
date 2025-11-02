@@ -5,8 +5,12 @@ LCC := clang
 # Common flags
 FLAGS := -Wall -static
 
+# Directories
+INCLUDE_DIR := include
+SRC_DIR := src
+
 # Source files
-SOURCES := $(wildcard *.c)
+SOURCES := $(wildcard $(SRC_DIR)/*.c)
 
 # Build directory
 BUILD_DIR := build
