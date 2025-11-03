@@ -1,6 +1,5 @@
 # Compilers
-WCC := i686-w64-mingw32-gcc
-LCC := clang
+CC := gcc
 
 # Common flags
 FLAGS := -Wall -static
@@ -16,26 +15,19 @@ SOURCES := $(wildcard $(SRC_DIR)/*.c)
 BUILD_DIR := build
 
 # Output names
-OUT := program
-OUT_LINUX := $(BUILD_DIR)/$(OUT)
-OUT_WINDOWS := $(BUILD_DIR)/$(OUT)
+EXE_NAME := graph
+OUT := $(BUILD_DIR)/$(EXE_NAME)
 
 # Default target
-all: linux windows
+all: $(OUT)
 
 # Ensure build directory exists
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
 
-# Build Linux version
-linux: $(BUILD_DIR)
-	$(LCC) $(FLAGS) $(SOURCES) -o $(OUT_LINUX)
-	@echo "✅ Compiled for Linux -> $(OUT_LINUX)"
-
-# Build Windows version
-windows: $(BUILD_DIR)
-	$(WCC) $(FLAGS) $(SOURCES) -o $(OUT_WINDOWS)
-	@echo "✅ Compiled for Windows -> $(OUT_WINDOWS)"
+# Compile source files
+$(OUT): $(BUILD_DIR) $(SOURCES)
+	$(CC) $(FLAGS) -I$(INCLUDE_DIR) -o $(OUT) $(SOURCES)
 
 # Clean up
 clean:
