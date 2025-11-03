@@ -27,10 +27,10 @@ $(BUILD_DIR):
 
 # Compile source files
 $(OUT): $(BUILD_DIR) $(SOURCES)
-	$(CC) $(FLAGS) -I$(INCLUDE_DIR) -o $(OUT) $(SOURCES)
+	$(CC) $(FLAGS) -o $(OUT) $(SOURCES)
 
 # Clean up
 clean:
 	rm -rf $(BUILD_DIR)
 
-.PHONY: windows linux clean all
+.PHONY: clean all
